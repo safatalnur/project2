@@ -63,6 +63,7 @@ export default class Game {
           break
       }
     })
+    // Game restart key
     document.addEventListener ('keydown', event=>{
       switch(event.key) {
         case KEYS.n:
