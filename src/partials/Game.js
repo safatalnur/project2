@@ -63,6 +63,14 @@ export default class Game {
           break
       }
     })
+    document.addEventListener ('keydown', event=>{
+      switch(event.key) {
+        case KEYS.n:
+          setTimeout (refresh => {
+            location.reload()
+          })
+      }
+    } )
   }
 
   // rendering pause, game board, player, ball and paddle
