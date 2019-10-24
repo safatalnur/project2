@@ -3,6 +3,7 @@ import Board from './Board'
 import Paddle from './Paddle'
 import Ball from './Ball'
 import Score from './Score'
+import Message from './Message'
 import { start } from 'repl'
 import { ENGINE_METHOD_PKEY_ASN1_METHS } from 'constants'
 
@@ -51,7 +52,7 @@ export default class Game {
     // Score board position
     this.score1 = new Score(this.width/2 -50, 30, 30)
     this.score2 = new Score(this.width / 2 +25, 30, 30)
-    console.log(this.board)
+    this.winner = new Message (this.width / 2 -256, 256, 60)
 
     // Game pause event
     document.addEventListener('keydown', event => {
@@ -99,26 +100,20 @@ export default class Game {
     this.score1.render(svg, this.player1.score)
     this.score2.render(svg, this.player2.score)
 
-    // Adding critaria of winning the game
-    const winingScore = 10
-    
-    
-    // Declaring who wins the game
-    if (this.player1.score>=winingScore) {
-      alert("Player 1 Win")
-      setTimeout(refresh => {
-        location.reload()
-      })
-      return
-    }else if (this.player2.score>=winingScore) {
-      alert("player 2 Win")
-      setTimeout( refresh =>{
-                location.reload(true)
-
-      })
-      return
-    }
-    return
+    //Wining condition and function
+    const player1Msg = 'Player 1 win!!!!!'
+        const player2Msg = 'Player 2 win!!!!!'
+        const winningScore = 6
+        console.log(this.player1.score)
+      console.log(player1Msg)
+        if (this.player1.score>= winningScore) {
+            this.winner.render(svg, player1Msg)
+            pause()
+            
+        } else if (this.player2.score >= winningScore) {
+          this.winner.render(svg, player2Msg)
+          pause()
+        }
   
   }
 }
