@@ -40,3 +40,21 @@ Once you have done this, you can run:
 
 Now check out your deployed site 🙂
 # pong-game
+
+## How to play PONG game
+Press 'spacebar' to pause the game Press 'n' to start a new game
+
+For player 1 paddle
+
+Press 'A' to move paddle up Press 'Z' to move paddle down
+
+For player 2 paddle
+
+Press '↑' arrowup to move paddle up Press '↓' arrowdown to move paddle down
+
+## What have I learn from this project
+In this project I have learned:
+
+extensively use javascript as a programming language
+learned about SVG
+how to import and export and comminucate between different files within the parent file
