@@ -35,6 +35,7 @@ export default class Ball {
                 && (this.y >= topY && this.y <=bottomY)
             ) {
                 this.vx = -this.vx
+                document.getElementById("sound").play()
             }
                 
             } else {
@@ -48,6 +49,7 @@ export default class Ball {
 
                     )   {
                         this.vx = -this.vx
+                        document.getElementById("sound").play()
                     }                 
            
            
