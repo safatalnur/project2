@@ -108,10 +108,12 @@ export default class Game {
       console.log(player1Msg)
         if (this.player1.score>= winningScore) {
             this.winner.render(svg, player1Msg)
+            document.getElementById("sound_winner").play()
             pause()
             
         } else if (this.player2.score >= winningScore) {
           this.winner.render(svg, player2Msg)
+          document.getElementById("sound_winner").play()
           pause()
         }
   
